@@ -1,0 +1,374 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.main-bg {
+    height: 100vh;
+    width: 120%;
+    background-image: url('../img/fon-stars.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+}
+main::after {
+    content: "";
+    background-image: url("../img/fon-smoke.png");
+    position: absolute;
+    background-size: cover;
+    height: 100vh;
+    width: 200%;
+    top: 0;
+    right: 0;
+    animation: width linear 20s infinite;
+    z-index: 1;
+}
+@keyframes width {
+    from {
+        right: -100%;
+    }
+    25% {
+        right: -50%;
+    }
+
+    50% {
+        right: 0;
+    }
+    75% {
+        right: -50%;
+    }
+
+    to {
+        right: -100%;
+    }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* HEADER */
+.header {
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__menu {
+    text-transform: uppercase;
+    display: flex;
+}
+.header__menu ul {
+    display: flex;
+    align-items: center;
+}
+.header__menu li a {
+    color: #F2E1C2;
+    font-weight: 500;
+}
+.header__menu li {
+    margin-right: 30px;
+}
+
+.header__btn {
+    background-color: #F2E1C2;
+    color: #262526;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+
+
+/* HEADER END */
+
+
+/* TOTAL */
+.total-text {
+    position: relative;
+    margin-top: 20vh;
+    margin-bottom: 220px;
+    z-index: 2;
+}
+h1.total-text__title {
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #F23207;
+    padding-left: 30px;
+    animation: opacity 2s ease-in;
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.total-text__video {
+    display: flex;
+    max-height: 600px;
+}
+
+.total-text__video img {
+    height: 100%;
+    animation: opacity-img 8s ease-in;
+}
+@keyframes opacity-img {
+    from {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.total-text__line {
+    animation: height 4s ease-in;
+    transition: all 0.5s ease;
+    height: auto;
+    width: 2px;
+    background-color: #FFF;
+    position: relative;
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+@keyframes height {
+    from {
+        max-height: 0;
+    }
+
+    to {
+        max-height: 600px;
+    }
+}
+.total-text__line::after,
+.total-text__line::before {
+    content: "";
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+.total-text__line::after {
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    right: -4px;
+}
+.total-text__line::before {
+    height: 6px;
+    width: 6px;
+    top: 0;
+    right: -2px;
+}
+
+
+/* TOTAL END */
+
+
+/* FORM */
+.form {
+    position: absolute;
+    background-color: #F2E1C2;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    padding-top: 100px;
+    display: none;
+}
+.form.open {
+    display: block;
+}
+.form__title {
+    font-size: 130px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #262526;
+    letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1;
+    margin-bottom: 80px;
+    position: relative;
+}
+.form fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+}
+.form fieldset>div {
+    width: 32%;
+}
+input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #262526;
+    display: block;
+    width: 100%;
+    font-family: Montserrat;
+    font-weight: 400;
+    padding: 5px 0;
+}
+input:focus-visible {
+    outline: none;
+}
+input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 80%;
+}
+.form label {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.form button {
+    color: #F2E1C2;
+    width: 32%;
+    display: block;
+    margin-left: auto;
+    margin-top: 60px;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 4px;
+    background: #262526;
+}
+
+.form__clouse {
+    background: #000;
+    color: #F2E1C2;
+    padding: 2px 2px 4px 4px;
+    position: absolute;
+    font-size: 20px;
+    top: 20px;
+    right: 0;
+    cursor: pointer;
+}
+
+
+
+
+
+/* FORM END */
+@media (min-width: 768px) {
+    .form button:hover {
+        color: #FFF;
+        transition: all 0.5s ease;
+    }
+    .header__menu li:hover>a {
+        color: #FFF;
+        transition: all 0.5s ease;
+    }
+    .header__btn:hover {
+        background-color: red;
+        transition: all 0.5s ease;
+        color: #F2E1C2;
+    }
+    .form__clouse:hover {
+        color: #F23207;
+    }
+}
+@media  (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    .header__wrapper {
+        justify-content: space-around;
+    }
+    .header__menu ul,
+    .header__menu {
+        flex-direction: column;
+    }
+    .header__menu li {
+        margin-right: 0;
+    }
+    .header__logo {
+        margin-bottom: 10px;
+    }
+    .header__btn {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .total-text__video {
+        height: 60vh;
+    }
+    .total-text__video img {
+        height: auto;
+        width: 100%;
+    }
+    .total-text {
+        margin-top: 30vh;
+    }
+    h1.total-text__title {
+        font-size: 25px;
+    }
+    .total-text__line {
+        display: none;
+    }
+    .form__title {
+        font-size: 44px;
+    }
+    .form fieldset {
+        flex-direction: column;
+    }
+    .form fieldset>div {
+        width: 90%;
+    }
+    input::-webkit-calendar-picker-indicator {
+        width: 70%;
+    }
+    main::after {
+        display: none;
+    }
+    .main-bg {
+        width: 100%;
+    }
+    .form__clouse {
+        top: -40px;
+    }
+    .form button {
+        width: 100%;
+    }
+}
