@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествие на Марс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <a href="/">
+                            <img src="/img/mars.svg" alt="">
+                        </a>
+                    </div>
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="">О марсе</a></li>
+                            <li><a href="">Процесс</a></li>
+                            <li><a href="">Билеты</a></li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                        <button class="header__btn">Купить билеты</button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="form">
+            <div class="container">
+                <h2 class="form__title">Бронирование билетов
+                    <div class="form__clouse">&#10006;</div>
+                </h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <div>
+                            <label for="data-on">Дата заезда:</label>
+                            <input type="date" id="data-on" value="2023-09-22" min="2023-09-22" max="2025-12-31">
+                        </div>
+                        <div>
+                            <label for="data-in">Дата выезда:</label>
+                            <input type="date" id="data-in" value="2023-12-31" min="2023-12-31" max="2025-12-31">
+                        </div>
+                        <div>
+                            <label for="people">Количество человек</label>
+                            <input type="text" id="people" placeholder="1 человек">
+                        </div>
+                    </fieldset>
+                    <button type="submit">Купить билеты</button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="main-bg"></div>
+        <div class="total-text">
+            <div class="container">
+                <div class="total-text__body">
+                    <h1 class="total-text__title">
+                        Точка назначения:
+                    </h1>
+                    <div class="total-text__video">
+                        <div class="total-text__line"></div>
+                        <img src="/img/video-image.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    
+
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
